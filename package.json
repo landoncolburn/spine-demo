@@ -1,6 +1,6 @@
 {
   "name": "hookline",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Signed webhook delivery for small services",
   "type": "module",
   "main": "src/index.ts",
