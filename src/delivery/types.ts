@@ -14,6 +14,10 @@ export interface DeliveryResult {
   ok: boolean;
   status: number | null;
   error?: string;
+  /** How many requests it took, retries included. */
+  attempts: number;
+  /** The subscriber's Retry-After, in seconds, when it sent one. */
+  retryAfterSeconds?: number;
   durationMs: number;
 }
 
@@ -21,4 +25,4 @@ export interface DeliveryResult {
 export type Transport = (
   url: string,
   init: { method: "POST"; headers: Record<string, string>; body: string; signal: AbortSignal },
-) => Promise<{ status: number }>;
+) => Promise<{ status: number; retryAfterSeconds?: number }>;
