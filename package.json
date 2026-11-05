@@ -1,0 +1,16 @@
+{
+  "name": "hookline",
+  "version": "0.3.0",
+  "description": "Signed webhook delivery for small services",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "node --test 'test/*.test.ts'",
+    "typecheck": "tsc --noEmit"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "typescript": "5.9.3"
+  }
+}
